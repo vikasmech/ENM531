@@ -1,0 +1,4 @@
+ssh-keygen -t rsa
+cat /Users/paris/.ssh/id_rsa.pub | ssh enm360@eniac.seas.upenn.edu mkdir -p .ssh
+cat /Users/paris/.ssh/id_rsa.pub | ssh enm360@eniac.seas.upenn.edu 'cat >> .ssh/authorized_keys'
+ssh enm360@eniac.seas.upenn.edu "chmod 700 .ssh; chmod 640 .ssh/authorized_keys"

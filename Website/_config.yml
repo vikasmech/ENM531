@@ -1,0 +1,74 @@
+# site setup
+exclude:
+  - README.md
+  - BUILD.md
+  - .gitignore
+  - LICENSE
+permalink: /:title/
+markdown: kramdown
+baseurl: /~enm531
+url: https://www.seas.upenn.edu
+githuburl: https://github.com/PredictiveIntelligenceLab/ENM531
+piazzaurl: https://piazza.com/upenn/spring2022/enm531
+canvasurl: https://canvas.upenn.edu/courses/1638573
+zoomlecturesurl: https://upenn.zoom.us/j/97062247167
+# course setup
+title: "Data-driven Modeling and Probabilistic Scientific Computing"
+semester: "Spring 2022"
+duration: "14 Weeks"
+instructor:
+ - Paris Perdikaris
+email:
+ - pgp@seas.upenn.edu
+coursecode:
+ - "ENM 531"
+coursedates:
+ - "January 12 to April 27, 2022"
+coursetime: "Tuesdays and Thursdays, 3:30pm to 5:00pm (DRLB 3W2, from 01/24 onwards)"
+officehourstime: "Thursdays, 11:30am to 1:30pm (Rm. 527A, 3401 Walnut Street, 5th floor)"
+courselocation:
+ - "DRLB 3W2"
+communication:
+ -
+   name: "Email"
+   description: "For questions, comments and class updates"
+   details:
+officehours:
+- description: "Thursdays, 11:30am to 1:30pm"
+# Tachyons Version
+tv: "4.6.1"
+
+# Exclude this stuff
+exclude: [node_modules, gulpfile.js]
+
+# SCSS Compress
+sass:
+  style: compressed
+
+
+# Bibtex
+  gems: ['jekyll/scholar']
+  style: apa
+  locale: en
+
+  sort_by: none
+  order: ascending
+
+  source: ./_bibliography
+  bibliography: references.bib
+  bibliography_template: "{{reference}}"
+
+  replace_strings: true
+  join_strings:    true
+
+  details_dir:    bibliography
+  details_layout: bibtex.html
+  details_link:   Details
+
+  query: "@*"
+
+# Includes an icon in the footer for each username you enter
+footer-links:
+  github: barryclark/jekyll-now
+  rss: # just type anything here for a working RSS icon
+  twitter: jekyllrb

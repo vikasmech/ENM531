@@ -1,0 +1,9 @@
+I"÷<p>Consult the Web for instructions and make sure you have the following software properly installed and working on your laptop:</p>
+<ul>
+  <li>A Python 3 distribution configured for scientific computing. The simplest way to set this up is by installing the <a href="https://anaconda.org/anaconda/python">Anaconda</a> distribution.</li>
+  <li><a href="https://github.com/google/jax#installation">JAX</a>. Composable transformations of Python+NumPy programs: differentiate, vectorize, JIT to GPU/TPUs, and more.</li>
+  <li><a href="http://jupyter.org/">Jupyter notebook</a>. You will need this in order to follow some of the in-class tutorials.</li>
+  <li><a href="https://git-scm.com/downloads">Git</a>. You will need this in order to download and stay in sync with the latest code we will develop in class.</li>
+  <li><a href="https://colab.research.google.com/notebooks/intro.ipynb">Google Colab</a>. Sign in with your Penn Gmail account. Provides free access to GPU and TPU cloud computing resources.</li>
+</ul>
+:ET

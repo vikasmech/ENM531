@@ -1,0 +1,14 @@
+I"%<p>This is a list of great books to consult. I will give you selected chapters as part of the course readings.</p>
+
+<ol class="bibliography"><li><span id="murphy2012machine">Murphy, K. P. (2012). <i>Machine learning: a probabilistic perspective</i>. MIT press.</span></li>
+<li><span id="bishop2006pattern">Bishop, C. M. (2006). <i>Pattern recognition and machine learning</i>. springer.</span></li>
+<li><span id="rasmussen2006gaussian">Rasmussen, C. E., &amp; Williams, C. K. I. (2006). <i>Gaussian processes for machine learning</i> (Vol. 1). MIT press Cambridge.</span></li>
+<li><span id="mackay2003information">MacKay, D. J. C. (2003). <i>Information theory, inference and learning algorithms</i>. Cambridge university press.</span></li>
+<li><span id="goodfellow2016deep">Goodfellow, I., Bengio, Y., &amp; Courville, A. (2016). <i>Deep learning</i>. MIT press.</span></li>
+<li><span id="quarteroni2006approximation">Quarteroni, A., &amp; Saleri, F. (2006). <i>Approximation of functions and data</i>. Springer.</span></li>
+<li><span id="kutz2013data">Kutz, J. N. (2013). <i>Data-driven modeling &amp; scientific computation: methods for complex systems &amp; big data</i>. Oxford University Press.</span></li>
+<li><span id="iserles2009first">Iserles, A. (2009). <i>A first course in the numerical analysis of differential equations</i> (Number 44). Cambridge university press.</span></li>
+<li><span id="strang1993introduction">Strang, G. (1993). <i>Introduction to linear algebra</i> (Vol. 3). Wellesley-Cambridge Press Wellesley, MA.</span></li>
+<li><span id="golub2012matrix">Golub, G. H., &amp; Van Loan, C. F. (2012). <i>Matrix computations</i> (Vol. 3). JHU Press.</span></li>
+<li><span id="boyd2004convex">Boyd, S., &amp; Vandenberghe, L. (2004). <i>Convex optimization</i>. Cambridge university press.</span></li></ol>
+:ET

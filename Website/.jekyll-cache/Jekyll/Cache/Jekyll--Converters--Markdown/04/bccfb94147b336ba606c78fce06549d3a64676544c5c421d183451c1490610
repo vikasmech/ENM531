@@ -1,0 +1,26 @@
+I"�<ul>
+  <li>The Emergence of Predictive Computational Science:
+    <ul>
+      <li>Computer predictions with quantified uncertainty <a class="citation" href="#oden2010computer">(Oden et al., 2010)</a></li>
+      <li><a href="https://vimeo.com/102636357">Lecture</a> by J.T Oden.</li>
+    </ul>
+  </li>
+  <li>Review papers on recent advances in machine learning:
+    <ul>
+      <li>Probabilistic machine learning and artificial intelligence <a class="citation" href="#ghahramani2015probabilistic">(Ghahramani, 2015)</a></li>
+      <li>Deep learning <a class="citation" href="#lecun2015deep">(LeCun et al., 2015)</a></li>
+      <li>Machine learning: Trends, perspectives, and prospects <a class="citation" href="#jordan2015machine">(Jordan &amp; Mitchell, 2015)</a></li>
+    </ul>
+  </li>
+  <li>Scientific computing in Python:
+    <ul>
+      <li><a href="https://github.com/jrjohansson/scientific-python-lectures">Lectures and code</a> by Robert Johansson.</li>
+    </ul>
+  </li>
+</ul>
+
+<ol class="bibliography"><li><span id="oden2010computer">Oden, T., Moser, R., &amp; Ghattas, O. (2010). Computer predictions with quantified uncertainty, part I. <i>SIAM News</i>, <i>43</i>(9), 1–3.</span></li>
+<li><span id="ghahramani2015probabilistic">Ghahramani, Z. (2015). Probabilistic machine learning and artificial intelligence. <i>Nature</i>, <i>521</i>(7553), 452–459.</span></li>
+<li><span id="lecun2015deep">LeCun, Y., Bengio, Y., &amp; Hinton, G. (2015). Deep learning. <i>Nature</i>, <i>521</i>(7553), 436–444.</span></li>
+<li><span id="jordan2015machine">Jordan, M. I., &amp; Mitchell, T. M. (2015). Machine learning: Trends, perspectives, and prospects. <i>Science</i>, <i>349</i>(6245), 255–260.</span></li></ol>
+:ET
