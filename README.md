@@ -42,7 +42,7 @@ Please consult the TA regarding issues related to setting up your computing envi
 
 TA: Shyam Sankaran
 - Office Hours: Mondays 3-4pm, Fridays 3-4pm, Rm. 534, 3401 Walnut Street, 5th floor.
-- Email: <ssankaran@seas.upenn.edu>
+- Email: <shyamss@seas.upenn.edu>
 
 Grader: Jin Wu
 - Email: <jinwu@sas.upenn.edu>
