@@ -6,15 +6,19 @@ This is a work in progress. For now it just includes research documentation.
 Index
 -----------
 
-* [About](#about)
-* [Goals](#goals)
-* [Users](#users)
-* [Layouts](#layouts)
-* [Contents](#contents)
-* [Type of lesson materials](#type-of-lesson-materials)
-* [Use normalista](#use-normalista)
-* [Inspiration and acknowledgements](#inspiration-and-acknowledgements)
-* [Contributors](#constributors)
+- [normalista](#normalista)
+  - [Index](#index)
+  - [About](#about)
+    - [Why Jekyll](#why-jekyll)
+    - [Why Github and Github pages](#why-github-and-github-pages)
+  - [Goals](#goals)
+  - [Users](#users)
+  - [Layouts](#layouts)
+  - [Contents](#contents)
+  - [Type of lesson materials](#type-of-lesson-materials)
+  - [Use normalista](#use-normalista)
+  - [Inspiration and acknowledgements](#inspiration-and-acknowledgements)
+  - [Contributors](#contributors)
 
 
 
@@ -142,5 +146,3 @@ normalista is made possible by this awesome creative contributors:
 If you want to **contribute**, open an issue or who fork/clone and then send a pull request. You don't have to be a coder to help. Your suggestions and ideas for layouts, user cases, improvements, learning activities, ideas worth checking are all valuable.   
 
 - Your name, last name will be added here 🤓
-
-# ENM540_website
