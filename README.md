@@ -32,6 +32,7 @@ Students will leave this course with experience in:
 ### Instructor
 
 [Paris Perdikaris](https://www.seas.upenn.edu/directory/profile.php?ID=237) is an Assistant Professor in the Department of Mechanical Engineering and Applied Mechanics at the University of Pennsylvania.  His work spans a wide range of areas in computational science and engineering, with a particular focus on the analysis and design of complex physical and biological systems using machine learning, stochastic modeling, computational mechanics, and high-performance computing. Current research thrusts include physics-informed machine learning, uncertainty quantification in deep learning, engineering design optimization, and non-invasive medical diagnostics.
+- Lectures: Tuesdays and Thursdays, 3.30pm-5.00pm, Towne 313.
 - Office Hours: Thursdays 11.30am-1.30pm, Rm. 527, 3401 Walnut Street, 5th floor.
 - Email: <pgp@seas.upenn.edu>
 
