@@ -1,46 +1,4 @@
-<html>
-  <!-- please find the included snippets in the /_includes directory -->
-  <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500|Playfair+Display:400,700" rel="stylesheet">
-
-  <title>Assignment 1:  A primer on Probability and Statistics (due on 02/04)</title>
-  <meta name="description" content="Problem 1 [20 Points]Subproblem 1 [10 Points]A train bridge is constructed across a wide river. Trains arrive at the bridge according to a Poissonprocess of ...">
-
-  <link rel="canonical" href="https://www.seas.upenn.edu/~enm531/assn1/">
-  <link rel="alternate" type="application/rss+xml" title="Data-driven Modeling and Probabilistic Scientific Computing" href="https://www.seas.upenn.edu/~enm531/feed.xml">
-  <link rel="shortcut icon" type ="image/png" href="https://www.seas.upenn.edu/~enm531/PredictiveIntelligence_logo.png">
-  <!-- Styles -->
-  <link rel="stylesheet" href="/~enm531/css/foundation.css">
-  <!-- LaTeX support with MathJax -->
-  <script type="text/javascript" async
-  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
-  </script>
-</head>
-
-
-  <body>
-    <div class="">
-  <nav class="top-bar">
-    <div class="top-bar-left">
-      <ul class="menu">
-	<li><a href="https://www.seas.upenn.edu/~enm531"><img src="https://www.seas.upenn.edu/~enm531/PredictiveIntelligence_logo.png" width="30" height="30"></a></li>
-	<li><a href="https://github.com/PredictiveIntelligenceLab/ENM531"><img src="https://www.seas.upenn.edu/~enm531/GitHub_logo.png" width="30" height="30"></a></li>
-        <li><a href="https://www.seas.upenn.edu/~enm531">Data-driven Modeling and Probabilistic Scientific Computing, Spring 2022</a></li>
-        <li><a href="/~enm531/syllabus">Syllabus</a></li>
-        <li><a href="/~enm531/duedates">Due Dates</a></li>
-        <li><a href="/~enm531/policies">Policies</a></li>
-      </ul>
-    </div>
-  </nav>
-</div>
-
-    
-   <div class="row main">
-      <h3>Assignment 1:  A primer on Probability and Statistics (due on 02/04)</h3>
-<h2 id="problem-1-20-points">Problem 1 [20 Points]</h2>
+I""<h2 id="problem-1-20-points">Problem 1 [20 Points]</h2>
 
 <h3 id="subproblem-1-10-points">Subproblem 1 [10 Points]</h3>
 
@@ -122,39 +80,4 @@ p(z_1,z_2) = \mathcal{N}\left(
 \end{align}</p>
 
 <p>Also consider a transformation \(z_1 = g_1(x_1) = x_1^3 - 3x_1^2 + 3x_1 - 1\) whose inverse mapping is \(x_1 = g_1^{-1}(z_1) = z_1^{1/3} + 1\), and \(z_2 = g_2(x_2) = x_2 + 0.5\) whose inverse mapping is \(x_2 = g_2^{-1}(z_2) = z_2 - 0.5\). Generate \(2000\) realizations for \((z_1, z_2)\) from \(p(z_1,z_2)\) and compute the corresponding \((x_1, x_2)\) pairs according to the given transformation. Then, maximize the log-likelihood of the \((x_1, x_2)\) observations to estimate the parameters of the forward mapping that transforms \(p(z)\) into \(p(x)\). Report the learned parameters, log-likelihood loss and a visualization of \(p(x)\) at every step of your gradient ascent algorithm.</p>
-
-
-
-<!-- the pager module looks at pages in the same category -->
-
-<div class="expanded button-group">
-  
-  <a class="button expanded warning" href="/~enm531/assn0/">previous</a>
-  
-  
-</div>
-
-
-
-    </div>
-
-        <script src="https://www.seas.upenn.edu/~enm531/js/vendor/jquery.js"></script>
-    <script src="https://www.seas.upenn.edu/~enm531/js/vendor/foundation.min.js"></script>
-    <script src="https://www.seas.upenn.edu/~enm531/js/vendor/what-input.js"></script>
-    <script src="https://www.seas.upenn.edu/~enm531/js/app.js"></script>
-
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112328818-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-112328818-1');
-</script>
-
-    
-  </body>
-
-</html>
+:ET
