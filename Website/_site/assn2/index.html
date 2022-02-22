@@ -7,7 +7,7 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500|Playfair+Display:400,700" rel="stylesheet">
 
   <title>Assignment 2:  Statistical estimation, linear &amp; logistic regression (due on 02/18)</title>
-  <meta name="description" content="Problem 1 [20 Points]:Suppose data \(\{x_i\}_{i = 1}^{i = n}\) is drawn from a exponential distribution with parameter \(\lambda\)  Derive the MLE estimate \...">
+  <meta name="description" content="Problem 1 [20 Points]:Suppose data \(\{x_i\}_{i = 1}^{i = n}\) is drawn from a exponential distribution with parameter \(\lambda\).  Derive the MLE estimate ...">
 
   <link rel="canonical" href="https://www.seas.upenn.edu/~enm531/assn2/">
   <link rel="alternate" type="application/rss+xml" title="Data-driven Modeling and Probabilistic Scientific Computing" href="https://www.seas.upenn.edu/~enm531/feed.xml">
@@ -42,12 +42,12 @@
       <h3>Assignment 2:  Statistical estimation, linear & logistic regression (due on 02/18)</h3>
 <h2 id="problem-1-20-points">Problem 1 [20 Points]:</h2>
 
-<p>Suppose data \(\{x_i\}_{i = 1}^{i = n}\) is drawn from a exponential distribution with parameter \(\lambda\)</p>
+<p>Suppose data \(\{x_i\}_{i = 1}^{i = n}\) is drawn from a exponential distribution with parameter \(\lambda\).</p>
 <ul>
-  <li>Derive the MLE estimate \(\mu_{\text{MLE}}\)</li>
-  <li>Derive the posterior distribution assuming the prior \(\lambda \sim \mathrm{Gam(\tau, \omega)}\)</li>
-  <li>Derive the MAP estimate \(\mu_{\text{MAP}}\)</li>
-  <li>Explain how this MAP estimate differs from the MLE estimate, and provide an interpretation of \tau and \omega as to how they affect the estimate.</li>
+  <li>Derive the MLE estimate \(\lambda_{\text{MLE}}\).</li>
+  <li>Derive the posterior distribution assuming the prior \(\lambda \sim \mathrm{Gam(\tau, \omega)}\).</li>
+  <li>Derive the MAP estimate \(\lambda_{\text{MAP}}\).</li>
+  <li>Explain how this MAP estimate differs from the MLE estimate, and provide an interpretation of \(\tau\) and \(\omega\) as to how they affect the estimate.</li>
 </ul>
 
 <h2 id="problem-2-30-points">Problem 2 [30 Points]:</h2>
@@ -60,14 +60,14 @@
 
 <p>Please write down the posterior conditional distribution for each of those parameters, i.e.,</p>
 
-\[p(\alpha\lvert x, y, \beta, \gamma)\]
+\[p(\alpha\lvert x, y, \beta, \gamma),\]
 
-\[p(\beta\lvert x, y, \alpha, \gamma)\]
+\[p(\beta\lvert x, y, \alpha, \gamma),\]
 
-\[p(\gamma\lvert x, y, \alpha, \beta)\]
+\[p(\gamma\lvert x, y, \alpha, \beta),\]
 
 <p>Comment on your results.
-(<strong>HINT</strong>: Might be easier to work with the \(\log\) of the posterior, and “complete the square” to identify the distribution)</p>
+(<strong>HINT</strong>: Might be easier to work with the $\log$ of the posterior, and “complete the square” to identify the distribution)</p>
 
 <h3 id="problem-3-15-points">Problem 3 [15 Points]</h3>
 
@@ -81,7 +81,7 @@
 
 <h3 id="problem-4-35-points">Problem 4 [35 Points]</h3>
 
-<p>Bayesian linear regression can be naturally extended to support approximation of nonlinear functions via the use of features or basis functions such as polynomials or trigonometric features. The case covered in class is just a special case of polynomial basis where you only use bias term and the identity mapping \(\phi(x) = x\), \(\Phi(x) = [1, x]\). It is straightforward to use other bases to do Bayesian linear regression. Here we consider three sets of 2D data both randomly sampled \(N = 50 \times 50\) observations within interval \((x, y) \in[-1,1] \times [-1, 1]\).</p>
+<p>Bayesian linear regression can be naturally extended to support approximation of nonlinear functions via the use of features or basis functions such as polynomials or trigonometric features. The case covered in class is just a special case of polynomial basis where you only use bias term and the identity mapping \(\phi(x) = x\), \(\Phi(x) = [1, x]\). It is straightforward to use other bases to do Bayesian linear regression. Here we consider three sets of 2D data both randomly sampled using \(N = 2500\) observations within interval \((x, y) \in[-1,1] \times [-1, 1]\).</p>
 
 \[z_1(x, y) = \cos(10(x^2+y)) \sin(10(x+y^2)) + \epsilon,\]
 
@@ -89,22 +89,22 @@
 
 \[z_3(x, y) = \frac{1}{(1 + 100 (x^2 + y^2))} + \epsilon,\]
 
-<p>where \(\epsilon\) corresponds to a zero mean uncorrelated Gaussian noise with variance set equal to 5 percent of your data’s standard deviation.</p>
+<p>where \(\epsilon\) corresponds to a zero mean uncorrelated Gaussian noise with standard deviation set equal to 5 percent of your data’s standard deviation.</p>
 
 <p>(1) Generate these three data sets and visualize them.
 (2) Consider Bayesian linear regression models using a tensor product of 1D basis functions:
-\([\phi_1(x) \phi_1(y), \phi_1(x) \phi_2(y), \cdots \phi_1(x) \phi_m(y), \phi_2(x) \phi_1(y), \cdots \phi_m(x) \phi_m(y)]\).</p>
+\([\phi_1(x) \phi_1(y), \phi_1(x) \phi_2(y), \cdots \phi_1(x) \phi_m(y), \phi_2(x) \phi_1(y), \cdots \phi_m(x) \phi_m(y)]\)</p>
 
 <p>Consider the following 1D basis functions:</p>
 <ul>
   <li>
-    <p><a href="https://en.wikipedia.org/wiki/Legendre\_polynomials">Legendre basis</a></p>
+    <p><a href="https://en.wikipedia.org/wiki/Legendre\_polynomials">Legendre basis</a>.</p>
   </li>
   <li>
-    <p>Fourier basis: \(\Phi(x) = [1, \sin(\pi x), \cos(\pi x), \cdots, \sin(m \pi x), \cos(m \pi x)]\)</p>
+    <p>Fourier basis: \(\Phi(x) = [1, \sin(\pi x), \cos(\pi x), \cdots, \sin(m \pi x), \cos(m \pi x)].\)</p>
   </li>
   <li>
-    <p>RBF basis: \(\phi_1(x) = 1, \phi_i(x) = \exp(-100 (x - \xi_{i-1})^2) \forall i \neq 1, \xi = \texttt{linspace}(-1, 1, m)\)</p>
+    <p>RBF basis: \(\phi_1(x) = 1, \phi_i(x) = \exp(-100 (x - \xi_{i-1})^2) \forall i \neq 1, \xi = \texttt{linspace}(-1, 1, m).\)</p>
   </li>
 </ul>
 
