@@ -1,0 +1,16 @@
+---
+layout: default
+---
+
+<h3>{{page.title}}</h3>
+{{page.content}}
+{% for item in page.due %}
+  <h4>{{item.session}}</h4>
+  <ul>
+    <li>Draft: {{item.draft}}. Submit: {{item.draftsubmit}}</li>
+    <li>Final: {{item.final}}. {% if finalsubmit.length > 0 %}Submit: {{item.finalsubmit}}{% endif %}</li>
+  </ul>
+{% endfor %}
+
+{% include pager.html %}
+

@@ -1,0 +1,81 @@
+I"Y<h2 id="problem-1-20-points">Problem 1 [20 Points]</h2>
+
+<p>Consider a Bayesian model with parameters \(\theta\) for which you want to maximize its marginal log-likelihood \(\log p(\mathcal{D})\) given some observed data \(\mathcal{D}\). As this objective is generally intractable, assume a variational approximation to
+the posterior by introducing an auxiliary distribution \(q(\theta\lvert\mathcal{D})\).</p>
+
+<p>(1) Derive the following inequality:</p>
+
+\[\log p(\mathcal{D}) \geq \mathbb{E}_{q(\theta\lvert\mathcal{D})}\log p(\mathcal{D}\lvert \theta) + \mathbb{E}_{q(\theta\lvert\mathcal{D})}\log p(\theta) - \mathbb{E}_{q(\theta\lvert\mathcal{D})}\log q(\theta\lvert\mathcal{D})\]
+
+<!-- (*Hint: use an importance sampling argument and Jensen's inequality*) -->
+
+<p>(2) Show that the above inequality becomes an equality when the \(\mathbb{KL}\) divergence between the true posterior and your variational posterior becomes 0, i.e.</p>
+
+\[\mathbb{KL}[q(\theta\lvert\mathcal{D})||p(\theta\lvert \mathcal{D})] = 0.\]
+
+<p>(3) One way to design a more flexible variational approximation beyond the mean-field familty is by considering an invertible transformation \(f_{\phi}: \mathcal{Z} \to \mathcal{\Theta}\), where \(\phi\) denotes the parameters of the invertible transformation. Using the change of variables formula, we can obtain a variational approximation \(q_{\phi}(\theta\lvert\mathcal{D})\) that is easy to sample from and easy to evaluate as</p>
+
+\[\begin{aligned}
+    \theta &amp; = f(z), \; \text{with} \; z \sim p_z(z), \\
+    q_{\phi}(\theta\lvert\mathcal{D}) &amp; = p_z(f_{\phi}^{-1}(\theta)) |\det \nabla_{\theta}(f_{\phi}^{-1}(\theta))|.
+\end{aligned}\]
+
+<p>Derive a tractable optimization objective for identifying the optimal parameters \(\phi\) via gradient-based optimization assuming that \(p_z=\mathcal{N}(0,I)\).</p>
+
+<h2 id="problem-2-40-points">Problem 2 [40 Points]</h2>
+
+<p>Recall HW2 Question 2, where you derived the conditional distribution of a Bayesian regression model with a likelihood \(p(y\lvert x, \alpha, \beta, \gamma)\) corresponding to a linear observation model is \(y = \alpha x + \beta + \epsilon\). Noting that \(\gamma\) represents the noise level in the observed data, i.e. it corresponds to the precision of the data likelihood. In this case, the likelihood can be expressed as</p>
+
+\[\begin{aligned}
+p(y\lvert x, \alpha, \beta, \gamma) = \left(\sqrt{\frac{\gamma}{2\pi}}\right)^n\exp\left(-\frac{\gamma}{2}\left(\sum\limits_{i=1}^n\|y_i - x_i\alpha - \beta\|^2_2\right)\right),
+\end{aligned}\]
+
+<p>while the conditional posteriors are:</p>
+
+\[\begin{aligned}
+p(\alpha\lvert x, y, \beta, \gamma) &amp; = \mathcal{N}(\mu_1,\frac{1}{\lambda_1}), \ \ \text{where}\ \mu_1 = \frac{\gamma \sum\limits_{i=1}^{n}x_i(y_i-\beta)}{1+\gamma \sum\limits_{i=1}^{n}x_i^2}, \ \ \text{and}\ \lambda_1 = 1+\gamma \sum_{i=1}^{n}x_i^2, \\
+p(\beta\lvert x, y, \alpha, \gamma) &amp; = \mathcal{N}(\mu_2,\frac{1}{\lambda_2}), \ \ \text{where}\ \mu_2 = \frac{\gamma \sum\limits_{i=1}^{n}(y_i-x_i\alpha)}{n\gamma+1}, \ \ \text{and}\ \lambda_2 = n\gamma+1, \\
+p(\gamma\lvert x, y, \alpha, \beta) &amp; =  \text{Gam}(a,b), \ \ \text{where}\ a=\frac{n}{2}+2 \ \ \text{and}\ b = \frac{1}{2}\left[2+\sum_{i=1}^{n}(y_i-x_i\alpha-\beta)^2\right].
+\end{aligned}\]
+
+<p>Generate your training data by considering true parameters \(\alpha, \beta, \gamma = 1.5, -3, 1\). Considering a uniform distribution, randomly sample \(x\) in \([0, 3]\) using \(N = 200\).</p>
+
+<p>(1) Implement the Gibbs sampling algorithm using the above conditional posteriors to generate \(5,000\) samples from the target posterior distribution \(p(\alpha,\beta,\gamma\lvert x, y)\). Discard the first 2,000 as a burn-in phase and plot a histogram generated from your samples. Also, please draw some samples of linear lines using \(50\) samples you got.</p>
+
+<p>(2) Gibbs sampling depends on deriving an analytical expression of the corresponding conditional posterior distributions. However, this cannot be done in many applications. Assume that you only have access to the unnormalized posterior, using the likelihood listed above and prior distributions: \(p(\alpha) = \mathcal{N}(0, 1)\), \(p(\beta) = \mathcal{N}(0, 1)\) and \(p(\gamma) = \textrm{Gam(2, 1)}\). Implement the Metropolis algorithm to sample \(5,000\) samples from the target posterior distribution \(p(\alpha,\beta,\gamma\lvert x, y)\).  Discard the first 2,000 as a burn-in phase and plot a histogram generated from your samples. Please compare these histograms with the plots from Gibbs sampling. Also, please draw some samples of linear lines using \(50\) samples you got.</p>
+
+<h2 id="problem-3-40-points">Problem 3 [40 Points]</h2>
+
+<p>(1) The Fisher Information Matrix is defined as:
+\(F = \mathbb{E}_{p(x\lvert \theta)}[\nabla_{\theta}\log p(x|\theta)\nabla_{\theta}\log p(x|\theta)^T].\)
+ Prove that negative expected Hessian of log-likelihood is equal to the Fisher Information Matrix \(F\).</p>
+
+<p>(2) Prove that Fisher Information Matrix \(F\) is the Hessian of \(\mathbb{KL}\)-divergence between two distributions \(p(x\lvert \theta)\) and \(p(x\lvert \theta')\) with respect to \(\theta'\) evaluated at \(\theta' = \theta\).</p>
+
+<p>(3) Consider the following parametrization for \(p(\mathbf{x};\alpha, \beta)\)</p>
+
+\[\begin{aligned}
+    p(\mathbf{x};\alpha, \beta) = \frac{1}{2 \pi} \exp \left[-\frac{1}{2}\left(x_1 - \left[3 \alpha + \frac{1}{3} \beta \right]\right)^2 - \frac{1}{2} (x_2 - \frac{1}{3} \alpha)^2 \right].
+\end{aligned}\]
+
+<p>In this question, we will study different techniques for optimizing the parameters \(\alpha\) and \(\beta\), where the training data \(p^\star(\mathbf{x})\) is generated at \(N = 200,000\) datapoints using \(\alpha = 0\) and \(\beta = 0\). The objective function to be considered is the cross-entropy loss</p>
+
+\[\begin{aligned}
+    \mathcal{L}(\alpha, \beta) = -\mathbb{E}_{p^\star(\mathbf{x})} [\log p(\mathbf{x}; \alpha, \beta)].
+\end{aligned}\]
+
+<p>For all the questions , please start your initial guess for the parameters at \((\alpha_0, \beta_0)=(1, -1)\) and determine a suitable learning rate for each case considered. Write down your own Python code to implement the following methods.</p>
+
+<p>(3a) Use gradient descent to find \(\alpha\) and \(\beta\). Also report the negative log-likelihood and the parameter trajectory over a contour plot in the parameter space.</p>
+
+<p>(3b) Given a number of data \(X = \{x_1, ..., x_n\}\), the empirical Fisher Information Matrix could be written as:</p>
+
+\[F = \frac{1}{n}\sum_{i=1}^n[\nabla_{\theta}\log p(x_i \lvert \theta)\nabla_{\theta}\log p(x_i \lvert \theta)^T].\]
+
+<p>Conduct a simulation study using the natural gradient descent update rule:</p>
+
+\[\theta = \theta - \eta F^{-1}g(\theta),\]
+
+<p>to find \(\alpha\) and \(\beta\), where \(g(\theta)\) is the gradient of the parameters. Contrast the trajectory you observe here against what you observed in (1), and briefly describe what we can infer from this result.</p>
+
+:ET
