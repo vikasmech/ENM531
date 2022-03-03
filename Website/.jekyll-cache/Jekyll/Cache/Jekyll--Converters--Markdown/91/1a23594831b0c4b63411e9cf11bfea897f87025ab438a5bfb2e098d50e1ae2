@@ -1,0 +1,6 @@
+I"<ul>
+  <li>Convolutional layers, sparsity and parameter sharing, pooling.</li>
+  <li>Recurrent layers, parameter sharing, vanishing gradients, LSTMs, GRUs.</li>
+  <li>Applications to image recognition, sequence-to-sequence modeling, time-series forecasting</li>
+</ul>
+:ET
